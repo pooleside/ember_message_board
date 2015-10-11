@@ -1,11 +1,13 @@
 <div class="container">
-  <h2> Your Neighborhood Messaage Board </h2>
-  {{#each model as |question|}}
+  <h2> Your Neighborhood Message Board </h2>
   <ul>
+  {{#each model as |question|}}
+
     <p>{{question.author}}</p>
     <p>{{question.title}}</p>
     <p>{{question.body}}</p>
-  </ul>
+
   {{/each}}
+</ul>
 </div>
 {{outlet}}
