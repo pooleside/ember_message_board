@@ -1,0 +1,14 @@
+<h3>Add a new question</h3>
+
+<form>
+  <p>
+    {{input value=question.title placeholder="Title"}}
+    {{input value=question.author placeholder="Author"}}
+  </p>
+  <p>
+    {{textarea value=question.body placeholder="Body"}}
+  </p>
+  <p>
+    <span {{action "createQuestion" post}} class="btn btn-submit">Publish</span>
+  </p>
+</form>
