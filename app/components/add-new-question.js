@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  actions: {
-    createQuestion(post) {
-      this.sendAction('createQuestion', question);
-      this.set('question', {});
-    }
-  }
+  //actions: {
+    //createQuestion(post) {
+      //this.sendAction('createQuestion', question);
+      //this.set('question', {});
+    //}
+  //}
 });

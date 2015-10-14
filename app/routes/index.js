@@ -2,22 +2,16 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return {
-      data: this.store.findAll('question'),
-      question: {}
-    }
+    return this.store.findAll('question');
+
   },
 
   actions: {
-    createQuestion(info) {
-      let newQuestion = this.store.createRecord('question', {
-        title: info.title,
-        body: info.body,
-        author: info.author,
-
-      });
-
-      newQuestion.save();
-    }
+    delete(question) {
+      if(confirm('Are you sure you want to delete this question?')){
+      question.destroyRecord();
+      this.transitionTo('index');
+     }
+   }
   }
 });
