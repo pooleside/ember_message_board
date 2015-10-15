@@ -1,0 +1,9 @@
+<div class="container">
+ <div class="well">
+   <h3>{{question.title}}</h3>
+   <h5>{{question.author}}</h5>
+   <p>{{question.body}}</p>
+   {{update-question question=question update="update"}} <br>
+   <button{{action 'delete' question}} class= "btn btn-xs btn-default">Delete</button>
+ </div>
+</div>

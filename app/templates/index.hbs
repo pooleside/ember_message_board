@@ -1,13 +1,10 @@
 <div class="container">
- {{#each model as |question|}}
- <div class="well">
-   <h3>{{question.title}}</h3>
-   <h5>{{question.author}}</h5>
-   <p>{{question.body}}</p>
-   <button{{action 'delete' question}}>Delete</button>
- </div>
- {{/each}}
- {{new-question save="save"}}
- </div>
-<!--{{add-new-question question=model.question createQuestion="createQuestion"}}-->
-{{outlet}}
+  {{#each model as |question|}}
+    <div class="well">
+       <h4>{{#link-to 'question' question.id}}{{question.title}}{{/link-to}}</h4>
+       <h5>by {{question.author}} </h5>
+    </div>
+  {{/each}}
+
+{{new-question save="save"}}
+</div>
