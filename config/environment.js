@@ -21,8 +21,14 @@ module.exports = function(environment) {
     },
 
     contentSecurityPolicy: {
-    'frame-src': "'self' https://*.firebaseio.com",
-    'script-src': "'self' 'unsafe-eval' https://*.firebaseio.com"
+        'default-src': "'none'",
+        'script-src': "'self' 'unsafe-eval' https://*.firebaseio.com",
+        'font-src': "'self'",
+        'connect-src': "'self' wss://*.firebaseio.com",
+        'img-src': "'self' *",
+        'style-src': "'self' 'unsafe-inline'",
+        'frame-src': "'self' https://*.firebaseio.com"
+
   }
   };
 
